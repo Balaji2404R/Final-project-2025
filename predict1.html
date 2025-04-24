@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .detailed-suggestion {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9f7ef;
+            border: 1px solid #d1e7dd;
+            border-radius: 5px;
+        }
+
+        /* Optional: Add custom styles for buttons, form elements, etc. */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ result }}</h1>
+        <h2>{{ positive }}%</h2>
+        <h2>{{ res2 }}</h2>
+        <img src="{{ plot_image }}" alt="Input Details">
+        <div class="detailed-suggestion">
+            <h3>Detailed Suggestion:</h3>
+            <p>{{ detailed_suggestion | safe }}</p>
+        </div>
+        <a href="/model">Accuracy</a>
+    </div>
+</body>
+</html>
